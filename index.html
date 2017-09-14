@@ -52,16 +52,26 @@ $(document).ready(function() {
   <!-- Start page header  -->
 <div data-role="header" data-position="fixed" class="header">
 <img src="images/logo.png" alt="" title="" width="" height="" class="logo">
-<a data-icon="bars" data-iconpos="notext" data-role="button" href="#menu" class="ui-btn-right">القائمة</a>
+<a data-icon="bars" data-iconpos="notext" data-role="button" href="#menu" class="bars_icon ui-btn-right">القائمة</a>
 </div>
 <!-- End page header  -->
 
 <!-- start page menu  -->
 <div data-role="panel" id="menu" data-position="right" data-display="push">
-    <h3>القائمة</h3>
+<div class="ui-panel-inner-top-HG">
+    <!-- <h3>القائمة</h3> -->
+</div>
+<!--  -->
     <ul data-role="listview">
-        <li><a href="#main_page" data-transition="slide" data-direction="reverse" data-icon="arrow-l"  data-iconpos="notext">الرئيسية</a></li>
-    </ul>
+      <li data-icon="home" ><a href="#main_page" >الرئيسية</a></li>
+      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">أخبار تقنية </a></li>
+      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">تصميم المواقع</a></li>
+      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">تطوير الووردبريس</a></li>
+      <li data-icon="star" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">مفضلتي</a></li>
+      <li data-icon="mail" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">القائمة البريدية</a></li>
+      <li data-icon="info" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">إسألني سؤالاً</a></li>
+   </ul>
+
 </div>
 <!-- /panel - End page menu -->
 
