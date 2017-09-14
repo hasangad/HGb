@@ -37,6 +37,10 @@
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+
+    <!-- Notice :: next plugin to hide status bar on IOS , iphone   -->
+    <!-- SOURCE :: https://stackoverflow.com/questions/28546873/cordova-phonegap-ignores-fullscreen-preference-in-config-xml-on-ios  -->
+    <preference name="StatusBarOverlaysWebView" value="true" />
     <!--
         Define a specific version of PhoneGap to build into your app.
         <preference name="phonegap-version"       value="3.5.0" />
@@ -62,7 +66,13 @@
     <plugin name="cordova-plugin-media" />-->
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-splashscreen" />
-    <!--<plugin name="cordova-plugin-vibration" />-->
+    <plugin name="phonegap-plugin-push" />
+    <plugin name="cordova-plugin-vibration" />
+    <!-- Notice :: next plugin to hide status bar on IOS , iphone   -->
+    <!-- SOURCE :: https://stackoverflow.com/questions/28546873/cordova-phonegap-ignores-fullscreen-preference-in-config-xml-on-ios  -->
+    <plugin name="cordova-plugin-hidden-statusbar-overlay" />
+
+
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
