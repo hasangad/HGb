@@ -65,11 +65,11 @@ p {
 }
 
 .ui-btn-icon-notext:after, .ui-btn-icon-left:after, .ui-btn-icon-right:after {
-    top: 34% !important;
+    top: 27% !important;
     margin-top: -11px !important;
 }
 
-.ui-page-theme-a .ui-btn { width: 48px !important; height: 48px !important;}
+.header .ui-btn { width: 48px !important; height: 48px !important;}
 
 
 
@@ -78,7 +78,7 @@ table, th, td {
 	border: 1px solid black;
 }
 
-body { background:#ffffff  url(../images/bg.jpg) top right no-repeat fixed; background-size:200%; }
+body , #main_page , .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper { background:#523905 !important;  background-color:#523905 !important;}
 
 .cars_list { display:block;
     overflow: hidden; }
@@ -97,11 +97,21 @@ body { background:#ffffff  url(../images/bg.jpg) top right no-repeat fixed; back
 
 	 #menu { background-color: #96641d; direction: rtl; text-align: right; opacity: 0.95}
 
-	 	 #menu .ui-panel-inner { background-color: #7b4f10; text-shadow: none}
+	 	 #menu .ui-panel-inner-top-HG {background: #7b4f10 url('../images/logo.png') center center no-repeat;
+		 background-size: contain;
+    text-shadow: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25vh;}
 
 		  #menu .ui-panel-inner h3 { color: #ffffff; margin-bottom: 2em}
+#menu .ui-listview { margin-top:22vh; }
+			#menu .ui-listview li a { text-align: right; color:#ffffff; line-height: 200%; font-family: "Droid Arabic Kufi",tahoma; font-weight: 400}
+			#menu .ui-listview li a:active { color:#da8e0b; }
 
-			#menu .ui-listview li a { text-align: right}
+.header .bars_icon { margin-top: 14px;}
 
 .logo {      max-width: 25%;
     max-height: 100%;
