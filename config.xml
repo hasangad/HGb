@@ -69,9 +69,9 @@
     <!--<plugin name="cordova-plugin-firebase-messaging"/>-->
     <!--<plugin name="cordova-plugin-fcm">-->
 	<plugin name="cordova-plugin-fcm-with-dependecy-updated">
-          <platform name="android">
+          <!--<platform name="android">
     		<source-file src="google-services.json" target-dir="project/"/>
-    	</platform>
+    	</platform>-->
     	<!--<platform name="ios">
     		<source-file src="GoogleService-Info.plist"/>
     	</platform>-->
