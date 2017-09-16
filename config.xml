@@ -66,10 +66,10 @@
     <plugin name="cordova-plugin-media" />-->
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-splashscreen" />
-    <plugin name="cordova-plugin-fcm"/>
-    <plugin name="cordova-plugin-firebase-messaging">
+    <!--<plugin name="cordova-plugin-firebase-messaging"/>-->
+    <plugin name="cordova-plugin-fcm">
           <platform name="android">
-    		<source-file src="google-services.json" target-dir="./"/>
+    		<source-file src="google-services.json" target-dir="project/"/>
     	</platform>
     	<!--<platform name="ios">
     		<source-file src="GoogleService-Info.plist"/>
