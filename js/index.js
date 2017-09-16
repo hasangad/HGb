@@ -33,9 +33,71 @@ var app = {
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
+  /*  onDeviceReady: function() {
         app.receivedEvent('deviceready');
+    },*/
+
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        console.log('Received Device Ready Event');
+        console.log('calling setup push');
+        app.setupPush();
+
     },
+    setupPush: function() {
+        console.log('calling push init');
+        var push = PushNotification.init({
+            "android": {
+                "senderID": "499005818743"
+            },
+            "browser": {},
+            "ios": {
+                "sound": true,
+                "vibration": true,
+                "badge": true
+            },
+            "windows": {}
+        });
+        console.log('after init');
+
+        push.on('registration', function(data) {
+            console.log('registration event: ' + data.registrationId);
+
+            var oldRegId = localStorage.getItem('registrationId');
+
+            if (oldRegId !== data.registrationId) {
+                // Save new registration ID
+                localStorage.setItem('registrationId', data.registrationId);
+                // Post registrationId to your app server as the value has changed
+            }
+
+            var parentElement = document.getElementById('registration');
+            var listeningElement = parentElement.querySelector('.waiting');
+            var receivedElement = parentElement.querySelector('.received');
+
+            listeningElement.setAttribute('style', 'display:none;');
+            receivedElement.setAttribute('style', 'display:block;');
+        });
+
+        push.on('error', function(e) {
+            console.log("push error = " + e.message);
+        });
+
+        push.on('notification', function(data) {
+            console.log('notification event');
+            navigator.notification.alert(
+                data.message,         // message
+                null,                 // callback
+                data.title,           // title
+                'Ok'                  // buttonName
+            );
+       });
+    }
+    };
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -51,41 +113,41 @@ var app = {
 
 /*function exitFromApp()
              {
-				 
+
 				 //alert("test");
                 navigator.app.exitApp();
              }*/
-			 
+
 			 // Wait for PhoneGap to load
 /*document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-	
+
     //alert("deviceready");
     document.getElementsByClassName('exit_app').addEventListener('click', function() {
-		
+
 		//alert("test");
         navigator.app.exitApp();
     });
 }*/
-	
-	
+
+
 			 // Wait for PhoneGap to load
 //document.addEventListener("deviceready", onDeviceReady, false);
 			  //alert("Document is ready");
 
 function onDeviceReady() {
-	
+
     //alert("deviceready");
 	$(".exit_app").click(function() {
     //document.getElementsByClassName('exit_app').addEventListener('click'
-		
+
 		//alert("Test Exit App");
         navigator.app.exitApp();
     });
 }
-			
-			
+
+
 onDeviceReady();
 
 

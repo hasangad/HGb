@@ -66,7 +66,18 @@
     <plugin name="cordova-plugin-media" />-->
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-splashscreen" />
-    <plugin name="phonegap-plugin-push" />
+    <plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config" />
+          <platform name="android">
+    		<source-file src="google-services.json" target-dir="./"/>
+    	</platform>
+    	<!--<platform name="ios">
+    		<source-file src="GoogleService-Info.plist"/>
+    	</platform>-->
+    </plugin>
+    <plugin name="phonegap-plugin-push">
+    <variable name="SENDER_ID" value="499005818743" />
+  </plugin>
+
     <plugin name="cordova-plugin-vibration" />
     <!-- Notice :: next plugin to hide status bar on IOS , iphone   -->
     <!-- SOURCE :: https://stackoverflow.com/questions/28546873/cordova-phonegap-ignores-fullscreen-preference-in-config-xml-on-ios  -->
