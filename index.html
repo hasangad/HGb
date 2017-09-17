@@ -42,7 +42,8 @@ $.mobile.changePage( "nextPage.html", {
 
       /*$(".about").append('<div class="row no-padding"><h2>'+loc.loc.title+'</h2><h3>الهاتف : '+loc.loc.phn+'</h3><iframe width="100%" height="200" frameborder="0" style="border:1px solid #f0f0f0; height:200px" src="https://www.google.com/maps/embed/v1/place?q='+loc.loc.lat+','+loc.loc.lng+'&amp;key=AIzaSyBy6xPT2Cwvz9SLwDHXticdg3Hr88YHi10"></iframe></div><br>');*/
 
- 	  $("#main_page .posts").append('<div class="col-xs-6 post_area"><a href="#'+post.post.id+'"><img src="'+post.post.thumb+'"><h2>'+post.post.title+'</h2><span><i class="fa fa-calendar"></i> &nbsp;'+post.post.date+'</span></a></div>');
+      $("#main_page .posts").append('<div class="col-xs-6 post_area"><a href="#post'+post.post.id+'" data-rel="dialog" data-transition="flip" ><img src="'+post.post.thumb+'"><h2>'+post.post.title+'</h2><span><i class="fa fa-calendar"></i> &nbsp;'+post.post.date+'</span></a></div>');
+      $("body").append('<div data-role="page" id="post'+post.post.id+'" class="post_content"><div data-role="header" data-position="fixed" class="post_header"></div><img src="'+post.post.thumb+'"><h2>'+post.post.title+'</h2><span><i class="fa fa-calendar"></i> &nbsp;'+post.post.date+'</span></a><p>'+post.post.content+'</p></div>');
 
   });
 
