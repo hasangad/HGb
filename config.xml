@@ -69,11 +69,6 @@
 	 <plugin name="phonegap-plugin-push">
     <variable name="SENDER_ID" value="499005818743" />
   </plugin>
-<<<<<<< HEAD
-
-=======
-
->>>>>>> origin/master
 	<!--<plugin name="cordova-plugin-firebase-messaging"/>-->
     <!--<plugin name="cordova-plugin-fcm"/>-->
 
