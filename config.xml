@@ -78,7 +78,7 @@
     		<source-file src="google-services.json" target-dir="./project/"/>
     	</platform>
     	<!--<platform name="ios">-->
-    		<source-file src="GoogleService-Info.plist"/>
+    		<!--<source-file src="GoogleService-Info.plist"/>
     	</platform>-->
     <!--</plugin>-->
 		<!--<plugin name="cordova-plugin-fcm"/>-->
