@@ -1,0 +1,62 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "XXXXXXX",
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-fcm-config": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        },
+        "cordova-plugin-hidden-statusbar-overlay": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.HasanGadBlog"
+        }
+    }
+}
