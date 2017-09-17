@@ -82,7 +82,7 @@
 		</platform>
   </plugin>
   <plugin name="cordova-plugin-fcm-plus"/>
-		<!--<plugin name="cordova-plugin-fcm"/>-->
+	<!--<plugin name="cordova-plugin-fcm"/>-->
     <plugin name="cordova-plugin-vibration" />
     <!-- Notice :: next plugin to hide status bar on IOS , iphone   -->
     <!-- SOURCE :: https://stackoverflow.com/questions/28546873/cordova-phonegap-ignores-fullscreen-preference-in-config-xml-on-ios  -->
