@@ -81,6 +81,7 @@
     		<source-file src="GoogleService-Info.plist"/>
 		</platform>
   </plugin>
+  <plugin name="cordova-plugin-fcm-plus"/>
 		<!--<plugin name="cordova-plugin-fcm"/>-->
     <plugin name="cordova-plugin-vibration" />
     <!-- Notice :: next plugin to hide status bar on IOS , iphone   -->
