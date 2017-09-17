@@ -71,16 +71,16 @@
   </plugin>
     <!--<plugin name="cordova-plugin-firebase-messaging"/>-->
     <!--<plugin name="cordova-plugin-fcm"/>-->
-		<plugin name="cordova-plugin-fcm-config"/>
+		<!--<plugin name="cordova-plugin-fcm-config"/>-->
 	<!-- No plugin will work but this -config -->
-	<!--<plugin name="cordova-plugin-fcm-config">
+	<<plugin name="cordova-plugin-fcm-config">
           <platform name="android">
     		<source-file src="google-services.json" target-dir="./project/"/>
     	</platform>
     	<!--<platform name="ios">-->
     		<!--<source-file src="GoogleService-Info.plist"/>
     	</platform>-->
-    <!--</plugin>-->
+    </plugin>
 		<!--<plugin name="cordova-plugin-fcm"/>-->
     <plugin name="cordova-plugin-vibration" />
     <!-- Notice :: next plugin to hide status bar on IOS , iphone   -->
