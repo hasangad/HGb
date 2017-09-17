@@ -75,11 +75,11 @@
 	<!-- No plugin will work but this -config -->
 	<plugin name="cordova-plugin-fcm-config">
           <platform name="android">
-    		<source-file src="google-services.json" target-dir=""/>
+    		<source-file src="google-services.json" target-dir="./"/>
     	</platform>
-    <platform name="ios">
+    <!--<platform name="ios">
     		<source-file src="GoogleService-Info.plist"/>
-		</platform>
+		</platform>-->
   </plugin>
 	<!--<plugin name="cordova-plugin-fcm"/>-->
     <plugin name="cordova-plugin-vibration" />
