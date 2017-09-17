@@ -110,7 +110,7 @@
     </platform>
     <!--<plugin name="cordova-plugin-firebase" spec="~0.1.24" />-->
     <!--<plugin name="cordova-plugin-fcm" spec="~2.1.2" />-->
-    <plugin name="cordova-plugin-fcm" spec="~2.1.2"/>
+    <plugin name="cordova-plugin-fcm" spec="~2.0.0"/>
     <!--<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config" />-->
     <!--<plugin name="cordova-plugin-fcm-config"/>-->
 </widget>
