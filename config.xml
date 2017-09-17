@@ -32,8 +32,6 @@
     <plugin name="phonegap-plugin-push">
         <variable name="SENDER_ID" value="499005818743" />
     </plugin>
-    <!--<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config" />-->
-    <plugin name="cordova-plugin-fcm-config"/>
     <plugin name="cordova-plugin-vibration" />
     <plugin name="cordova-plugin-hidden-statusbar-overlay" />
     <icon src="icon.png" />
@@ -111,4 +109,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <plugin name="cordova-plugin-fcm" spec="~2.1.2" />
+    <!--<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config" />-->
+    <plugin name="cordova-plugin-fcm-config"/>
 </widget>
