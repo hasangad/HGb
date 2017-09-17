@@ -112,6 +112,6 @@
     <!--<plugin name="cordova-plugin-fcm" spec="~2.1.2" />-->
     <plugin name="cordova-plugin-fcm" />
     <!--<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config" />-->
-    <plugin name="cordova-plugin-fcm-config"/>
+    <!--<plugin name="cordova-plugin-fcm-config"/>-->
 
 </widget>
