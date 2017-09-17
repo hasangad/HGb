@@ -33,6 +33,14 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+alert("Device IS ready");
+      window.FirebasePlugin.getToken(function(token) {
+          // save this server-side and use it to push notifications to this device
+          console.log(token);
+      }, function(error) {
+          console.error(error);
+      });
+
         console.log('Received Device Ready Event');
         console.log('calling setup push');
         app.setupPush();
