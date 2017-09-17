@@ -1,3 +1,4 @@
+<<<<<<< HEAD:platforms/browser/www/index.html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -110,3 +111,117 @@ $(document).ready(function() {
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>مدونة حسن جاد التقنية</title>
+<!--<base href="https://hasangad.com/">-->
+<!--<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap.min-css-controllers'  href='bs/css/controllers.css' type='text/css' media='all' />
+<link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  CSS  -->
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
+<link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
+
+<link rel='stylesheet' id='css-style'  href='css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+<script>
+$.mobile.changePage( "nextPage.html", {
+  transition: "slide",
+  reverse: true
+});
+</script>
+ <script>
+
+
+   /*var url="http://app.madadrental.com/send-mail.php?name1="+name+"&email1="+email+"&car_id1="+car_id+"&message1="+message+"&contact1="+contact+"&pickup_location_id1="+pickup_location_id+"&pickup_date1="+pickup_date+"&pickup_time1="+pickup_time+"&dropoff_location_id1="+dropoff_location_id+"&dropoff_date1="+dropoff_date+"&dropoff_time1="+dropoff_time+"&body_type_id1="+body_type_id+"&fuel_type_id1="+fuel_type_id+"";*/
+   var url ="https://hasangad.com/blog-posts-api/";
+   $.getJSON(url,function(result){
+         console.log(result);
+
+  $.each(result, function(i , post){
+
+      /*$(".about").append('<div class="row no-padding"><h2>'+loc.loc.title+'</h2><h3>الهاتف : '+loc.loc.phn+'</h3><iframe width="100%" height="200" frameborder="0" style="border:1px solid #f0f0f0; height:200px" src="https://www.google.com/maps/embed/v1/place?q='+loc.loc.lat+','+loc.loc.lng+'&amp;key=AIzaSyBy6xPT2Cwvz9SLwDHXticdg3Hr88YHi10"></iframe></div><br>');*/
+
+      $("#main_page .posts").append('<div class="col-xs-6 post_area"><a href="#post'+post.post.id+'" data-rel="dialog" data-transition="flip" ><img src="'+post.post.thumb+'"><h2>'+post.post.title+'</h2><span><i class="fa fa-calendar"></i> &nbsp;'+post.post.date+'</span></a></div>');
+      $("body").append('<div data-role="page" id="post'+post.post.id+'" class="post_content"><div data-role="header" data-position="fixed" class="post_header"></div><img src="'+post.post.thumb+'"><h2>'+post.post.title+'</h2><span><i class="fa fa-calendar"></i> &nbsp;'+post.post.date+'</span></a><p>'+post.post.content+'</p></div>');
+
+  });
+
+ });
+$(document).ready(function() {
+
+});
+</script>
+
+</head>
+<body>
+<div data-role="page" id="main_page">
+  <!-- Start page header  -->
+<div data-role="header" data-position="fixed" class="header">
+<img src="images/logo.png" alt="" title="" width="" height="" class="logo">
+<a data-icon="bars" data-iconpos="notext" data-role="button" href="#menu" class="bars_icon ui-btn-right">القائمة</a>
+</div>
+<!-- End page header  -->
+
+<!-- start page menu  -->
+<div data-role="panel" id="menu" data-position="right" data-display="push">
+<div class="ui-panel-inner-top-HG">
+    <!-- <h3>القائمة</h3> -->
+</div>
+<!--  -->
+    <ul data-role="listview">
+      <li data-icon="home" ><a href="#main_page" >الرئيسية</a></li>
+      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">أخبار تقنية </a></li>
+      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">تصميم المواقع</a></li>
+      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">تطوير الووردبريس</a></li>
+      <li data-icon="star" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">مفضلتي</a></li>
+      <li data-icon="mail" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">القائمة البريدية</a></li>
+      <li data-icon="info" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">إسألني سؤالاً</a></li>
+   </ul>
+
+</div>
+<!-- /panel - End page menu -->
+
+<div role="main" class="ui-content posts">
+
+</div>
+<!-- End of POSTS / UI CONTENT  -->
+</div>
+<!-- End Of main page  -->
+
+
+
+<div class="app_body container-fluid">
+<!-- <div class="hr"></div> -->
+<div class="posts container-fluid">
+
+
+</div><!-- End of about -->
+
+
+</div>
+<!-- End of app body -->
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script type="text/javascript">
+            app.initialize();
+        </script>
+
+</body>
+</html>
+>>>>>>> origin/master:index.html
