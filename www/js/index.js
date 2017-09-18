@@ -38,14 +38,14 @@ var app = {
 
         console.log('Received Device Ready Event');
         console.log('calling setup push');
-        //app.setupPush();
+        app.setupPush();
         /*---------------------------------------------------------*/
        /* window.FirebasePlugin.getToken(function(token) {
   alert(token);
 }, function(error){
   alert('Error!!!');
 });*/
-        window.FirebasePlugin.getToken(function(token) {
+      /*  window.FirebasePlugin.getToken(function(token) {
              alert(token);
             // save this server-side and use it to push notifications to this device
             console.log(token);
@@ -65,11 +65,38 @@ var app = {
         console.log(notification);
         }, function(error) {
         console.error(error);
-        });
+        });*/
         /*---------------------------------------------------------*/
+        
+        //FCMPlugin.onTokenRefresh( onTokenRefreshCallback(token) );
+//Note that this callback will be fired everytime a new token is generated, including the first time.
+FCMPlugin.onTokenRefresh(function(token){
+    alert( token );
+});
+        
+        
+        //FCMPlugin.getToken( successCallback(token), errorCallback(err) );
+//Keep in mind the function will return null if the token has not been established yet.
+FCMPlugin.getToken(function(token){
+    alert(token);
+});
+        
+        
+        //FCMPlugin.onNotification( onNotificationCallback(data), successCallback(msg), errorCallback(err) )
+//Here you define your application behaviour based on the notification data.
+FCMPlugin.onNotification(function(data){
+    if(data.wasTapped){
+      //Notification was received on device tray and tapped by the user.
+      alert( JSON.stringify(data) );
+    }else{
+      //Notification was received in foreground. Maybe the user needs to be notified.
+      alert( JSON.stringify(data) );
+    }
+});
+        
 
     },
-    /*setupPush: function() {
+    setupPush: function() {
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
@@ -116,5 +143,5 @@ var app = {
                 'Ok'                  // buttonName
             );
        });
-    }*/
+    }
 };
