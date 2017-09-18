@@ -67,6 +67,9 @@ var app = {
         console.error(error);
         });*/
         /*---------------------------------------------------------*/
+       
+        // SOURCE :: https://forums.adobe.com/thread/2266393
+        // SOURCE 2 :: https://github.com/hasangad/cordova-plugin-fcm
         
         //FCMPlugin.onTokenRefresh( onTokenRefreshCallback(token) );
 //Note that this callback will be fired everytime a new token is generated, including the first time.
