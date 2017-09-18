@@ -34,57 +34,32 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
 alert("Device IS ready");
-      window.FirebasePlugin.getToken(function(token) {
-          // save this server-side and use it to push notifications to this device
-          console.log(token);
-      }, function(error) {
-          console.error(error);
-      });
+
 
         console.log('Received Device Ready Event');
         console.log('calling setup push');
         app.setupPush();
+        /*---------------------------------------------------------*/
+        window.FirebasePlugin.getToken(function(token) {
+            // save this server-side and use it to push notifications to this device
+            console.log(token);
+        }, function(error) {
+            console.error(error);
+        });
 
-        // Retrieve Firebase Messaging object.
-const messaging = firebase.messaging();
-// Get Instance ID token. Initially this makes a network call, once retrieved
-// subsequent calls to getToken will return from cache.
-messaging.getToken()
-.then(function(currentToken) {
-  if (currentToken) {
-    sendTokenToServer(currentToken);
-    updateUIForPushEnabled(currentToken);
-  } else {
-    // Show permission request.
-    console.log('No Instance ID token available. Request permission to generate one.');
-    // Show permission UI.
-    updateUIForPushPermissionRequired();
-    setTokenSentToServer(false);
-  }
-})
-.catch(function(err) {
-  console.log('An error occurred while retrieving token. ', err);
-  showToken('Error retrieving Instance ID token. ', err);
-  setTokenSentToServer(false);
-});
-}
-// Callback fired if Instance ID token is updated.
-messaging.onTokenRefresh(function() {
-  messaging.getToken()
-  .then(function(refreshedToken) {
-    console.log('Token refreshed.');
-    // Indicate that the new Instance ID token has not yet been sent to the
-    // app server.
-    setTokenSentToServer(false);
-    // Send Instance ID token to app server.
-    sendTokenToServer(refreshedToken);
-    // ...
-  })
-  .catch(function(err) {
-    console.log('Unable to retrieve refreshed token ', err);
-    showToken('Unable to retrieve refreshed token ', err);
-  });
-});
+        window.FirebasePlugin.onTokenRefresh(function(token) {
+        // save this server-side and use it to push notifications to this device
+        console.log(token);
+        }, function(error) {
+        console.error(error);
+        });
+
+        window.FirebasePlugin.onNotificationOpen(function(notification) {
+        console.log(notification);
+        }, function(error) {
+        console.error(error);
+        });
+        /*---------------------------------------------------------*/
 
     },
     setupPush: function() {
