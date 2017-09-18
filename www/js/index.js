@@ -38,7 +38,7 @@ alert("Device IS ready");
 
         console.log('Received Device Ready Event');
         console.log('calling setup push');
-        app.setupPush();
+        //app.setupPush();
         /*---------------------------------------------------------*/
         window.FirebasePlugin.getToken(function(token) {
             // save this server-side and use it to push notifications to this device
@@ -62,7 +62,7 @@ alert("Device IS ready");
         /*---------------------------------------------------------*/
 
     },
-    setupPush: function() {
+    /*setupPush: function() {
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
@@ -109,5 +109,5 @@ alert("Device IS ready");
                 'Ok'                  // buttonName
             );
        });
-    }
+    }*/
 };
