@@ -122,8 +122,8 @@
     <!--<plugin name="cordova-plugin-fcm" spec="2.1.2"/>-->
     <!--<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config" />-->
     <!--<plugin name="cordova-plugin-fcm" spec="https://github.com/guyromb/cordova-plugin-fcm-plus" />-->
-    <plugin name="cordova-plugin-fcm" spec="https://github.com/hasangad/cordova-plugin-fcm" />
-    <plugin name="cordova-plugin-fcm-config" spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
+    <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
+    <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
     <!--<plugin spec="https://myUser:MyPassword@bitbucket.org/prospectum/cordova-plugin-fcm-config.gitMyPassword@bitbucket.org/prospectum/cordova-plugin-fcm-config.git" source="git" />-->
     <!--<plugin name="cordova-plugin-firebase" spec="~0.1.19"/>-->
 
