@@ -116,6 +116,8 @@ FCMPlugin.onNotification(function(data){
         console.log('after init');
 
         push.on('registration', function(data) {
+          navigator.notification.beep(1);
+
             console.log('registration event: ' + data.registrationId);
 
             var oldRegId = localStorage.getItem('registrationId');
