@@ -104,12 +104,9 @@ FCMPlugin.onNotification(function(data){
         var push = PushNotification.init({
             "android": {
                 "senderID": "499005818743",
-                "sound": true,
-                "vibration": true,
             },
             "browser": {},
             "ios": {
-              "senderID": "499005818743",
                 "sound": true,
                 "vibration": true,
                 "badge": true
