@@ -26,10 +26,10 @@
     <preference name="android-installLocation" value="auto" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <plugin name="cordova-plugin-device" />
-    <plugin name="cordova-plugin-device-motion" />
+    <!--<plugin name="cordova-plugin-device-motion" />
     <plugin name="cordova-plugin-device-orientation" />
     <plugin name="cordova-plugin-geolocation" />
-    <plugin name="cordova-plugin-globalization" />
+    <plugin name="cordova-plugin-globalization" />-->
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-splashscreen" />
     <plugin name="phonegap-plugin-push">
@@ -41,7 +41,17 @@
   <resource-file src="GoogleService-Info.plist" />
 </platform>
     </plugin>
-    <plugin name="cordova-plugin-vibration" />
+        <!--<plugin name="cordova-plugin-firebase" spec="~0.1.24" />-->
+    <!--<plugin name="cordova-plugin-fcm" spec="~2.1.2" />-->
+    <!--<plugin name="cordova-plugin-fcm" spec="2.1.2"/>-->
+    <!--<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config" />-->
+    <!--<plugin name="cordova-plugin-fcm" spec="https://github.com/guyromb/cordova-plugin-fcm-plus" />-->
+    <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
+    <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
+    <!--<plugin spec="https://myUser:MyPassword@bitbucket.org/prospectum/cordova-plugin-fcm-config.gitMyPassword@bitbucket.org/prospectum/cordova-plugin-fcm-config.git" source="git" />-->
+    <!--<plugin name="cordova-plugin-firebase" spec="~0.1.19"/>-->
+<!--<resource-file src="GoogleService-Info.plist" target="GoogleService-Info.plist" />-->
+    <!--<plugin name="cordova-plugin-vibration" />-->
     <plugin name="cordova-plugin-hidden-statusbar-overlay" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
@@ -103,7 +113,7 @@
     <splash height="1536" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2048" />
     <preference name="SplashScreenDelay" value="3000" />
     <access origin="*" />
-    <plugin name="cordova-plugin-whitelist" version="1" />
+    <!--<plugin name="cordova-plugin-whitelist" version="1" />-->
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -117,14 +127,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <!--<plugin name="cordova-plugin-firebase" spec="~0.1.24" />-->
-    <!--<plugin name="cordova-plugin-fcm" spec="~2.1.2" />-->
-    <!--<plugin name="cordova-plugin-fcm" spec="2.1.2"/>-->
-    <!--<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config" />-->
-    <!--<plugin name="cordova-plugin-fcm" spec="https://github.com/guyromb/cordova-plugin-fcm-plus" />-->
-    <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
-    <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
-    <!--<plugin spec="https://myUser:MyPassword@bitbucket.org/prospectum/cordova-plugin-fcm-config.gitMyPassword@bitbucket.org/prospectum/cordova-plugin-fcm-config.git" source="git" />-->
-    <!--<plugin name="cordova-plugin-firebase" spec="~0.1.19"/>-->
-<!--<resource-file src="GoogleService-Info.plist" target="GoogleService-Info.plist" />-->
+
 </widget>
