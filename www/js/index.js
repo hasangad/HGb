@@ -147,5 +147,5 @@ FCMPlugin.getToken(function(token){
                 'Ok'                  // buttonName
             );
        });
-    }
-};*/
+    }*/
+};
