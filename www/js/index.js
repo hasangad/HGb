@@ -67,7 +67,7 @@ var app = {
         console.error(error);
         });*/
         /*---------------------------------------------------------*/
-
+/*
         // SOURCE :: https://forums.adobe.com/thread/2266393
         // SOURCE 2 :: https://github.com/hasangad/cordova-plugin-fcm
 
@@ -96,7 +96,7 @@ FCMPlugin.onNotification(function(data){
       alert( JSON.stringify(data) );
     }
 });
-
+*/
 
     },
     setupPush: function() {
