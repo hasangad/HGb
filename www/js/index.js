@@ -98,7 +98,7 @@ FCMPlugin.getToken(function(token){
 
 
     },
-    setupPush: function() {
+   /* setupPush: function() {
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
@@ -138,7 +138,7 @@ FCMPlugin.getToken(function(token){
             console.log("push error = " + e.message);
         });
 
-        /*push.on('notification', function(data) {
+        push.on('notification', function(data) {
             console.log('notification event');
             navigator.notification.alert(
                 data.message,         // message
