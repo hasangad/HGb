@@ -67,7 +67,7 @@ var app = {
         console.error(error);
         });*/
         /*---------------------------------------------------------*/
-/*
+
         // SOURCE :: https://forums.adobe.com/thread/2266393
         // SOURCE 2 :: https://github.com/hasangad/cordova-plugin-fcm
 
@@ -87,7 +87,7 @@ FCMPlugin.getToken(function(token){
 
         //FCMPlugin.onNotification( onNotificationCallback(data), successCallback(msg), errorCallback(err) )
 //Here you define your application behaviour based on the notification data.
-FCMPlugin.onNotification(function(data){
+/*FCMPlugin.onNotification(function(data){
     if(data.wasTapped){
       //Notification was received on device tray and tapped by the user.
       alert( JSON.stringify(data) );
@@ -95,8 +95,8 @@ FCMPlugin.onNotification(function(data){
       //Notification was received in foreground. Maybe the user needs to be notified.
       alert( JSON.stringify(data) );
     }
-});
-*/
+});*/
+
 
     },
     setupPush: function() {
