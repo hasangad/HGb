@@ -34,8 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
 //alert("Device IS ready");
-
-alert( 'We are Testing ' );
+//alert( 'We are Testing ' );
         console.log('Received Device Ready Event');
         console.log('calling setup push');
         app.setupPush();
@@ -102,9 +101,9 @@ FCMPlugin.getToken(function(token){
     setupPush: function() {
         console.log('calling push init');
         var push = PushNotification.init({
-           /* "android": {
+            "android": {
                 "senderID": "499005818743",
-            },*/
+            },
             "browser": {},
             "ios": {
                 "sound": true,
@@ -139,7 +138,7 @@ FCMPlugin.getToken(function(token){
             console.log("push error = " + e.message);
         });
 
-        push.on('notification', function(data) {
+        /*push.on('notification', function(data) {
             console.log('notification event');
             navigator.notification.alert(
                 data.message,         // message
@@ -149,4 +148,4 @@ FCMPlugin.getToken(function(token){
             );
        });
     }
-};
+};*/
