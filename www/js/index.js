@@ -102,9 +102,9 @@ FCMPlugin.getToken(function(token){
     setupPush: function() {
         console.log('calling push init');
         var push = PushNotification.init({
-            "android": {
+           /* "android": {
                 "senderID": "499005818743",
-            },
+            },*/
             "browser": {},
             "ios": {
                 "sound": true,
