@@ -8,7 +8,7 @@
         Gadency Team
     </author>
 
-    <!--<preference name="phonegap-version" value="cli-6.5.0" />-->
+    <preference name="phonegap-version" value="cli-6.5.0" />
 
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
@@ -34,7 +34,7 @@
     <plugin name="cordova-plugin-splashscreen" />
     
     
-    <!--<plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
+    <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
     <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
     <plugin name="phonegap-plugin-push">
         <variable name="SENDER_ID" value="499005818743" />
@@ -44,7 +44,7 @@
 <platform name="ios">
   <resource-file src="GoogleService-Info.plist" />
 </platform>
-    </plugin>-->
+    </plugin>
     
     
         <!--<plugin name="cordova-plugin-firebase" spec="~0.1.24" />-->
