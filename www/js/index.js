@@ -18,8 +18,8 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
-        this.bindEvents();
+    //initialize: function() {
+     //   this.bindEvents();
     },
     // Bind Event Listeners
     //
@@ -35,8 +35,12 @@ var app = {
     onDeviceReady: function() {
 //alert("Device IS ready");
 //alert( 'We are Testing ' );
-        console.log('Received Device Ready Event');
-        console.log('calling setup push');
+       
+        
+      //  console.log('Received Device Ready Event');
+      //  console.log('calling setup push');
+       
+        
         //app.setupPush();
         /*---------------------------------------------------------*/
        /* window.FirebasePlugin.getToken(function(token) {
